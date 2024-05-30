@@ -3,4 +3,9 @@ body {
   max-width: 600px;
   text-align: center;
   color: blue;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+div{
+    margin: 15px;
 }
