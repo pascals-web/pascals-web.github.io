@@ -53,20 +53,20 @@ function rollNormalDice() {
 
 function rollMeteorDice() {
     const diceImagesMeteorDirection = [
-        'images/meteors/direction/Dice1.png',
-        'images/meteors/direction/Dice2.png',
-        'images/meteors/direction/Dice3.png',
-        'images/meteors/direction/Dice4.png',
-        'images/meteors/direction/Dice5.png',
-        'images/meteors/direction/Dice6.png'
+        'images/meteors/direction/dice1.png',
+        'images/meteors/direction/dice2.png',
+        'images/meteors/direction/dice3.png',
+        'images/meteors/direction/dice4.png',
+        'images/meteors/direction/dice5.png',
+        'images/meteors/direction/dice6.png'
     ];
     const diceImagesMeteorStrength = [
-        'images/meteors/strength/Dice1.png',
-        'images/meteors/strength/Dice2.png',
-        'images/meteors/strength/Dice3.png',
-        'images/meteors/strength/Dice4.png',
-        'images/meteors/strength/Dice5.png',
-        'images/meteors/strength/Dice6.png'
+        'images/meteors/strength/dice1.png',
+        'images/meteors/strength/dice2.png',
+        'images/meteors/strength/dice3.png',
+        'images/meteors/strength/dice4.png',
+        'images/meteors/strength/dice5.png',
+        'images/meteors/strength/dice6.png'
     ];
 
     const diceElements = [
