@@ -3,15 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Pascals-Web</title>
+    <title>Dice Roll Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Projekte aller art von <code>Pascal Schiffers</code> gibts hier</h1>
-    <div>stay tuned</div>
-    <img
-      src="https://media1.tenor.com/m/1pxfDm6nMcsAAAAC/slicing-satisfying.gif"
-      alt=""
-    />
+    <div class="container">
+      <h1>Dice Roll Simulator</h1>
+      <div class="controls">
+        <select id="expansionSelect" onchange="handleExpansionChange()">
+          <option value="none">None</option>
+          <option value="meteors">METEORS</option>
+        </select>
+      </div>
+      <div class="dice-container">
+        <div class="dice-wrapper">
+          <img id="dice1" src="images/BaseDice/dice1.png" alt="Dice 1" />
+        </div>
+        <div class="dice-wrapper">
+          <img id="dice2" src="images/BaseDice/dice1.png" alt="Dice 2" />
+        </div>
+        <div class="dice-wrapper">
+          <img id="dice3" src="images/BaseDice/dice1.png" alt="Dice 3" />
+        </div>
+        <div class="dice-wrapper">
+          <img id="dice4" src="images/BaseDiceSpecial/dice1.png" alt="Dice 4" />
+        </div>
+      </div>
+      <div id="meteorDice" class="dice-container" style="display: none">
+        <div class="dice-wrapper">
+          <img id="dice5" src="images/meteors/dice1.png" alt="Meteor Dice 1" />
+        </div>
+        <div class="dice-wrapper">
+          <img id="dice6" src="images/meteors/dice1.png" alt="Meteor Dice 2" />
+        </div>
+      </div>
+      <div class="button-container">
+        <button onclick="rollDice()" class="roll-button">Roll Dice</button>
+        <button
+          onclick="rollMeteorDice()"
+          class="roll-button meteor-button"
+          style="display: none"
+        >
+          Roll Meteors
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
