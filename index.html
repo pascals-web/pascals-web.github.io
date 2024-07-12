@@ -8,12 +8,16 @@
   </head>
   <body>
     <div class="container">
-      <h1>Dice Roll Simulator</h1>
+      <img src="/images/Schriftzug.png" alt="" />
       <div class="controls">
-        <select id="expansionSelect" onchange="handleExpansionChange()">
-          <option value="none">None</option>
-          <option value="meteors">METEORS</option>
-        </select>
+        <label>
+          <input
+            type="checkbox"
+            id="meteorCheckbox"
+            onchange="handleExpansionChange()"
+          />
+          METEORS Expansion
+        </label>
       </div>
       <div class="dice-container">
         <div class="dice-wrapper">
