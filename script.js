@@ -23,20 +23,20 @@ function rollDice(diceElements, diceImages) {
 
 function rollNormalDice() {
     const diceImagesBase = [
-        'images/BaseDice/dice1.png',
-        'images/BaseDice/dice2.png',
-        'images/BaseDice/dice3.png',
-        'images/BaseDice/dice4.png',
-        'images/BaseDice/dice5.png',
-        'images/BaseDice/dice6.png'
+        '/images/BaseDice/dice1.png',
+        '/images/BaseDice/dice2.png',
+        '/images/BaseDice/dice3.png',
+        '/images/BaseDice/dice4.png',
+        '/images/BaseDice/dice5.png',
+        '/images/BaseDice/dice6.png'
     ];
     const diceImagesSpecial = [
-        'images/BaseDiceSpecial/dice1.png',
-        'images/BaseDiceSpecial/dice2.png',
-        'images/BaseDiceSpecial/dice3.png',
-        'images/BaseDiceSpecial/dice4.png',
-        'images/BaseDiceSpecial/dice5.png',
-        'images/BaseDiceSpecial/dice6.png'
+        '/images/BaseDiceSpecial/dice1.png',
+        '/images/BaseDiceSpecial/dice2.png',
+        '/images/BaseDiceSpecial/dice3.png',
+        '/images/BaseDiceSpecial/dice4.png',
+        '/images/BaseDiceSpecial/dice5.png',
+        '/images/BaseDiceSpecial/dice6.png'
     ];
 
     const diceElements = [
