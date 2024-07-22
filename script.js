@@ -118,3 +118,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call handleExpansionChange initially to set the correct state
     handleExpansionChange();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var accordionButtons = document.querySelectorAll('.accordion-button');
+
+    accordionButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                // Close all open accordions
+                document.querySelectorAll('.accordion-content').forEach(function(content) {
+                    content.style.maxHeight = null;
+                });
+                // Open the clicked accordion
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
+    });
+});
