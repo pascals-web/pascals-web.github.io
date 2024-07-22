@@ -1,3 +1,7 @@
+document.cookie.split(";").forEach(function(c) {
+    document.cookie = c.trim().split("=")[0] + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+});
+
 function rollDice(diceElements, diceImages) {
     const finalResults = diceElements.map(() => Math.floor(Math.random() * 6));
     const intervalTime = 170; //Math.random() * (200 - 150) + 150; // Random time between 100ms and 200ms
