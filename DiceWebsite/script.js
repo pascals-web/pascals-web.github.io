@@ -4,11 +4,10 @@ document.cookie.split(";").forEach(function(c) {
 
 function rollDice(diceElements, diceImages) {
     const finalResults = diceElements.map(() => Math.floor(Math.random() * 6));
-    const intervalTime = 170; //Math.random() * (200 - 150) + 150; // Random time between 100ms and 200ms
-    const rollTimes = 10; //Math.floor(Math.random() * 9) + 4; // Random number between 2 and 10
+    const intervalTime = 170;
+    const rollTimes = 10;
     let currentRoll = 0;
 
-    // Start wiggle animation
     diceElements.forEach(dice => {
         dice.parentElement.classList.add('wiggling');
     });
@@ -22,12 +21,10 @@ function rollDice(diceElements, diceImages) {
         currentRoll++;
         if (currentRoll >= rollTimes) {
             clearInterval(intervalId);
-            // Set final results
             diceElements.forEach((dice, index) => {
                 dice.src = diceImages[index][finalResults[index]];
             });
 
-            // Stop wiggle animation after 2 seconds
             setTimeout(() => {
                 diceElements.forEach(dice => {
                     dice.parentElement.classList.remove('wiggling');
@@ -67,55 +64,47 @@ function rollNormalDice() {
     rollDice(diceElements, diceImages);
 }
 
-function rollMeteorDice() {
-    const diceImagesMeteorDirection = [
-        '/images/meteors/direction/dice1.png',
-        '/images/meteors/direction/dice2.png',
-        '/images/meteors/direction/dice3.png',
-        '/images/meteors/direction/dice4.png',
-        '/images/meteors/direction/dice5.png',
-        '/images/meteors/direction/dice6.png'
-    ];
-    const diceImagesMeteorStrength = [
-        '/images/meteors/strength/dice1.png',
-        '/images/meteors/strength/dice2.png',
-        '/images/meteors/strength/dice3.png',
-        '/images/meteors/strength/dice4.png',
-        '/images/meteors/strength/dice5.png',
-        '/images/meteors/strength/dice6.png'
-    ];
+function rollSpecialDice(diceSet) {
+    const diceSets = {
+        meteors: [
+            ['/images/meteors/direction/dice1.png', '/images/meteors/direction/dice2.png', '/images/meteors/direction/dice3.png', '/images/meteors/direction/dice4.png', '/images/meteors/direction/dice5.png', '/images/meteors/direction/dice6.png'],
+            ['/images/meteors/strength/dice1.png', '/images/meteors/strength/dice2.png', '/images/meteors/strength/dice3.png', '/images/meteors/strength/dice4.png', '/images/meteors/strength/dice5.png', '/images/meteors/strength/dice6.png']
+        ],
+        lava: [
+            ['/images/lava/dice1.png', '/images/lava/dice2.png', '/images/lava/dice3.png', '/images/lava/dice4.png', '/images/lava/dice5.png', '/images/lava/dice6.png'],
+            ['/images/lava/dice1.png', '/images/lava/dice2.png', '/images/lava/dice3.png', '/images/lava/dice4.png', '/images/lava/dice5.png', '/images/lava/dice6.png']
+        ]
+    };
 
-    const diceElements = [
-        document.getElementById('dice5'),
-        document.getElementById('dice6')
-    ];
+    const diceElements = document.querySelectorAll(`.dice-wrapper img[data-dice-set="${diceSet}"]`);
 
-    const diceImages = [diceImagesMeteorDirection, diceImagesMeteorStrength];
-
-    rollDice(diceElements, diceImages);
+    rollDice(Array.from(diceElements), diceSets[diceSet]);
 }
 
 function handleExpansionChange() {
-    const meteorCheckbox = document.getElementById('meteorCheckbox');
-    const meteorDice = document.getElementById('meteorDice');
-    const meteorButton = document.querySelector('.meteor-button');
+    document.querySelectorAll('.dice-checkbox').forEach(checkbox => {
+        const diceSet = checkbox.getAttribute('data-dice-set');
+        const diceContainer = document.querySelector(`#${diceSet}Dice`);
+        const button = document.querySelector(`.${diceSet}-button`);
 
-    if (meteorCheckbox.checked) {
-        meteorDice.style.display = 'flex';
-        meteorButton.style.display = 'inline-block';
-    } else {
-        meteorDice.style.display = 'none';
-        meteorButton.style.display = 'none';
-    }
+        if (checkbox.checked) {
+            diceContainer.style.display = 'flex';
+            button.style.display = 'inline-block';
+        } else {
+            diceContainer.style.display = 'none';
+            button.style.display = 'none';
+        }
+    });
 }
 
-// Attach event listeners
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.roll-button').addEventListener('click', rollNormalDice);
-    document.querySelector('.meteor-button').addEventListener('click', rollMeteorDice);
-    document.getElementById('meteorCheckbox').addEventListener('change', handleExpansionChange);
-    
-    // Call handleExpansionChange initially to set the correct state
+    document.querySelector('.meteor-button').addEventListener('click', () => rollSpecialDice('meteors'));
+    document.querySelector('.lava-button').addEventListener('click', () => rollSpecialDice('lava'));
+    document.querySelectorAll('.dice-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', handleExpansionChange);
+    });
+
     handleExpansionChange();
 });
 
@@ -128,11 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
             } else {
-                // Close all open accordions
                 document.querySelectorAll('.accordion-content').forEach(function(content) {
                     content.style.maxHeight = null;
                 });
-                // Open the clicked accordion
                 content.style.maxHeight = content.scrollHeight + 'px';
             }
         });
