@@ -3,138 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="manifest.json" />
-    <title>Projekt-Büste / Project-Bust</title>
+    <title>Infinite Scroll Credits</title>
     <style>
-/*       body {
-        background-color: rgb(188, 188, 188);
-      }
-      .text {
-        color: rgb(0, 0, 0);
-        font-size: 18px;
-        line-height: 1.6;
-        text-align: left;
-        font-family: "Helvetica", "Avenir", sans-serif;
-        padding: 28px;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        hyphens: auto;
-        text-align: justify;
-        text-align-last: left;
-      } */
-      body, html {
+      body,
+      html {
         margin: 0;
         padding: 0;
-        overflow: hidden; /* Disable browser scrollbars */
         height: 100%;
-        font-family: Arial, sans-serif;
+        overflow: hidden;
       }
-
-      #scroll-container {
+      #credits-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      #credits-image-1,
+      #credits-image-2 {
         position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 200%; /* Double height for seamless scrolling */
-        animation: scroll 20s linear infinite;
+        object-fit: cover;
+        transition: opacity 3s ease;
       }
-
-      .text-block {
-        width: 100%;
-        height: 100vh; /* Full screen height for each block */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
+      .fade-out {
+        opacity: 0;
       }
-
-      @keyframes scroll {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-100%); }
-        100% { transform: translateY(0); }
-      }
-
     </style>
   </head>
   <body>
-    <div id="scroll-container">
-      <div class="text-block">
-        Du arbeitest für die Tochtergesellschaft eines großen Onlinehändlers. Das Versprechen, dem du dich mit deinem Arbeitsvertrag untergeordnet hast: „Produkte schaffen, die so individuell sind wie unsere Kunden – personalisiert, nachhaltig, zukunftsweisend. Ein Spiegel ihrer individuellen Visionen.“ 
-Das Gebäude vor dir wirkt makellos – ein Monolith aus Glas und Stahl. Gleißende Lichter spiegeln sich auf den glatten Böden, dessen Material jeden Schritt zu absorbieren scheint. Als würde es deine Existenz aus der Umgebung herausfiltern. Du betrittst eine großzügige Halle. Symmetrisch angeordnete Reihen von 3D-Druckern erstrecken sich vor dir – sie wirken mehr wie eine Hightech-Installation, eine Hommage an die Perfektion der Technologie selbst: glänzend, modular, futuristisch. Die Luft trägt einen unverkennbaren Geruch, warmes Polymer und einem Hauch von Ozon – der Duft nach frisch produziertem.
-Dein Arbeitsplatz ist eine Konsole, zwei Monitore – minimalistisch. Eine Oberfläche voll abstrahierter Daten: sanft pulsierende Balken, fluktuierende Zahlen – eine Maschinenintelligenz, die durch ihre trainierten Algorithmen navigiert. Dieses vollkommen automatisierte Cluster an Druckern gestaltet und produziert Produkte basierend auf einer Bedarfsanalyse. Wir produzieren schon bevor das Bedürfnis überhaupt geweckt wurde. Deine Funktion: Störungen beheben, Fehler bemerken, Maschinen reinigen. Welche Produkte gedruckt werden entscheidet der Algorithmus. Dein Blick ruht auf dem Monitor. Daten flimmern vorbei, Zahlen und Balken, die angeblich alles erzählen, was du wissen musst.
-Ein Datenblock betitelt „BÜSTE“ erregt deine Aufmerksamkeit. Dein gelernter Blick schwenkt an den Bildschirmen vorbei, zur entsprechenden Maschine. Der Druckkopf zieht Linien, trägt Schichten auf, erschafft. Du stehst auf und gehst zur Maschine, um zu beobachten, wie sich die Züge klären: ein Kinn, dann ein Mund. Etwas daran hält dich fest. Der Druckkopf arbeitet weiter. Über dem schmallippigen Mund entsteht eine neue Kontur. Zuerst nichts weiter als eine dünne Linie, aber es reicht, um eine Ahnung in dir zu wecken. Ein Schauer läuft über deinen Rücken.
-„Hey!“ Die Stimme von Mark lässt dich zusammenzucken. Dein Kollege tritt mit einer dampfenden Kaffeetasse in der Hand zu dir: „Die Details sind beeindruckend, oder?“ Er lehnt sich an die Konsole, mustert das entstehende Gesicht.„Richtig saubere Arbeit. Früher hätte man dafür Stunden gebraucht, und einen Künstler oder so. Und wir schaffen das in zwanzig Minuten.“
-Du öffnest den Mund, um etwas zu sagen, aber die Worte bleiben dir im Hals stecken.
-„Alles okay?“ Mark sieht dich mit einem schiefen Lächeln an.
-„Findest du nicht …“ Du zögerst, wählst deine Worte sorgfältig: „Findest du nicht, dass das aussieht wie …“ Du flüsterst: „… Hitler?“
-Mark hebt eine Augenbraue, mustert die Büste. „Hm. Vielleicht. Keine Ahnung.“
-„Aber …“, beginnst du.
-„Was soll’s?“ Mark unterbricht dich. „Basiert wahrscheinlich auf dem Profil von irgendeinem Historiker oder Sammler. Hat bestimmt seine Richtigkeit .“ 
-„Aber das ist …“, versuchst du anzusetzen. Deine Hände sind feucht. „Findest du das nicht … beunruhigend?“
-Mark nimmt noch einen Schluck, sein Blick wandert schon woandershin. „Ich bin nicht hier, um mir darüber den Kopf zu zerbrechen. Das können die in der Ethik Abteilung machen.“ Während er sich abwendet, sagt er: “Reg dich nicht auf, die ändern nichts am Algorithmus, nur weil du etwas zu viele Geschichtsdokus gesehen hast. Du endest am Ende nur in einem Seminar für individuelle Effizienz-Optimierung oder so.“    
-Du reagierst nicht, starrst nur weiter auf die Büste. Das Summen des Druckers schwillt zu einem Tinnitus an. Die Maschine ist an der Nase angelangt und es besteht kein Zweifel mehr: Das überdimensionierte Gesicht ist das von Adolf Hitler.
-Du bleibst allein zurück. Marks Worte hallen in deinem Kopf nach: „Hat bestimmt seine Richtigkeit.“
-      </div>
-      <div class="text-block">
-        You work for the subsidiary of a large online retailer. The promise which you have committed yourself to with your employment contract: “Create products that are as individual as our customers - personalized, sustainable, future-oriented. A reflection of their individual visions.” 
-The building you’re in looms, pristine and monolithic, a construct of glass and steel. Light ricochets off the flawless floor, swallowing the sound of your steps as though the surface itself denies your existence. In the atrium, rows of 3D printers stand aligned with precision, more like an art exhibition than a workspace – a celebration of technology, gleaming, modern, unapologetically futuristic. The air hums with the scent of warm polymer, a faint thread of ozone. The scent of production 
-On your Table sits a small Box, connected to two monitors – minimalistic. They show a surface alive with abstracted data – softly pulsing bars, shifting numbers, machine intelligence threading through its own algorithms.
-The fully automated cluster of printers is designing and producing products, that the algorithm deemed useful, or rather profitable. Your job: Detect anomalies, report errors, calibrate hardware. Thus your stare, flickering numbers and bars give you the feeling of control.
-A data block labeled BUST catches your attention. Your trained gaze pans off the monitors, to the corresponding printer working among the others. The printhead jerks methodically, depositing layer after layer, constructing something from the void. You rise and walk closer, watching as shapes emerge. Is it a chin, a mouth? Something about it hooks you.
-The print head keeps moving, sketching a new contour above the tight-lipped mouth. Your gaze lingers, captivated by the odd familiarity of the shape, until realization dawned, sharp and unwelcome. 
-“Hey!” Mark’s voice cuts through your focus, jarring you. He’s standing beside you, sipping from a steaming mug. “Pretty slick, huh?” He leans against the console, his posture loose, almost smug. “Clean lines. Smooth layers. Used to take hours, maybe even a sculptor or „artist“. Now? Twenty minutes tops.” 
-You open your mouth to reply, but the words stick in your throat.
-“You good?” Mark’s smile tilts, just shy of mocking.
-“Don’t you think…” You hesitate, weighing your words. “Don’t you think it looks like…” You lower your voice. “Hitler?”
-Mark raises an eyebrow, glancing at the bust. “Huh. Maybe. Hard to say.”
-He takes another sip, unfazed.
-“But…” you start.
-“Relax.” He shrugs, cutting you off. “It’s probably based on some historian’s profile. Or maybe a collector’s dream. These things always have reasons.”
-“But it’s—” Your palms are damp. “Doesn’t that bother you?”
-Mark shrugs again “I’m not here to think about it man. Thats the job of the Ethics Committee.”
-You stare at him, unsure how to respond. His mug tips toward the bust. “Pretty efficient design, though. Gotta admire the precision.”
-The hum of the printer grows louder, almost grating. By now, it’s working on the nose. It’s unmistakable now that the overdimensioned face is that of Adolf Hitler.
-Mark steps away, chuckling softly. “Don’t stress, man. They’re not going to change it just because you’ve been binging the History Channel. You’ll just end up in Compliance Reassignment.”
-You’re left standing there, alone. The machine’s droning fills the silence, undisturbed. Mark’s words echo in your head: “These things always have reasons.”
-      </div>
+    <div id="credits-container">
+      <img
+        id="credits-image-1"
+        src="BuesteTextBild.png"
+        alt="Scrolling Credits"
+      />
+      <img
+        id="credits-image-2"
+        src="BuesteTextBild.png"
+        alt="Scrolling Credits"
+        class="fade-out"
+      />
     </div>
-      
-    </div>
+
     <script>
-      // service-worker.js
-      self.addEventListener("install", (event) => {
-        console.log("Service worker installed.");
-      });
+      const creditsContainer = document.getElementById("credits-container");
+      const creditsImage1 = document.getElementById("credits-image-1");
+      const creditsImage2 = document.getElementById("credits-image-2");
 
-      self.addEventListener("fetch", (event) => {
-        event.respondWith(fetch(event.request));
-      });
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/service-worker.js").then(() => {
-          console.log("Service Worker Registered");
-        });
+      // Configuration
+      const SCROLL_SPEED = 0.23; // pixels per frame
+      const PAUSE_DURATION = 5000; // milliseconds to pause at top/bottom
+      const FADE_DURATION = 3000; // milliseconds for fade effect
+
+      // State variables
+      let scrollPosition = 0;
+      let isScrolling = true;
+      let isPaused = false;
+      let currentImage = creditsImage1;
+      let nextImage = creditsImage2;
+
+      // Scroll animation function
+      function animateScroll() {
+        // If not scrolling or paused, stop animation
+        if (!isScrolling || isPaused) return;
+
+        // Update scroll position
+        scrollPosition += SCROLL_SPEED;
+        currentImage.style.transform = `translateY(-${scrollPosition}px)`;
+
+        // Check if we've reached the bottom of the image
+        if (
+          scrollPosition >=
+          currentImage.offsetHeight - creditsContainer.offsetHeight
+        ) {
+          // Pause at bottom before switching
+          isPaused = true;
+
+          // Fade out current image
+          currentImage.classList.add("fade-out");
+          nextImage.classList.remove("fade-out");
+
+          setTimeout(() => {
+            // Reset scroll and swap images
+            scrollPosition = 0;
+            currentImage.style.transform = "translateY(0)";
+
+            // Swap current and next images
+            [currentImage, nextImage] = [nextImage, currentImage];
+
+            // Pause briefly
+            setTimeout(() => {
+              isPaused = false;
+              animateScroll();
+            }, PAUSE_DURATION);
+          }, FADE_DURATION);
+        }
+
+        // Continue animation if not paused
+        if (!isPaused) {
+          requestAnimationFrame(animateScroll);
+        }
       }
 
-      const container = document.getElementById('scroll-container');
-      let idleTimeout;
-
-      function resetScroll() {
-        container.style.animationPlayState = 'running';
-      }
-
+      // Pause scrolling on user interaction
       function pauseScroll() {
-        container.style.animationPlayState = 'paused';
+        if (isScrolling) {
+          isScrolling = false;
+
+          // Resume scrolling after 5 seconds
+          setTimeout(() => {
+            isScrolling = true;
+            animateScroll();
+          }, 5000);
+        }
       }
 
-      function handleInteraction() {
-        pauseScroll();
-        clearTimeout(idleTimeout);
-        idleTimeout = setTimeout(resetScroll, 5000); // Resume after 5 seconds of inactivity
-      }
+      // Add event listeners for interaction
+      const interactionEvents = [
+        "mousemove",
+        "touchstart",
+        "touchmove",
+        "keydown",
+        "wheel",
+      ];
 
-      // Listen for user interactions
-      document.addEventListener('scroll', handleInteraction);
-      document.addEventListener('touchstart', handleInteraction);
-      document.addEventListener('mousemove', handleInteraction);
+      interactionEvents.forEach((event) => {
+        window.addEventListener(event, pauseScroll, { passive: true });
+      });
 
+      // Start the scroll animation
+      animateScroll();
     </script>
   </body>
 </html>
